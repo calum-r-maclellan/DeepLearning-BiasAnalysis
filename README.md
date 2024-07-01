@@ -1,5 +1,7 @@
 # Overview
-Foundation models (FMs) serve an important role in reducing the burden of extensive data and compute resources required for deep learning algorithms.
+Foundation models (FMs) serve an important role in data analytics for healthcare. 
+Typically built upon deep learning algorithms, FMs help to reduce the burden of extensive data and compute resources required for deep learning by 
+
 Both are promising attributes for healthcare AI. 
 However, care must be taken to ensure that the dataset used in development does not pose the risk of causing dataset shift. This
 In fact, it was recently shown that a popular FM (Google Health: https://github.com/lindawangg/COVID-Net/blob/master/docs/COVIDx.md) encoded such biases in its predictions [1]. 
