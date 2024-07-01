@@ -26,7 +26,7 @@ To examine the effects of potential biasing toward these subgroups
 Here we compare the PCA transformed embeddings between the conventional and foundation model. 
 
 ### PCA
-![](https://github.com/calum-r-maclellan/SGAN-COVID19/blob/main/pics/sgan_workflow.png)
+![](https://github.com/calum-r-maclellan/FM-bias-analysis-MIMIC-CXR/blob/main/figs/densenet-pca/pca-1-densenet-disease-marginal.pdf)
 
 
 
