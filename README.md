@@ -1,4 +1,5 @@
-# Overview
+# Overview 
+
 Foundation models (FMs) serve an important role in data analytics for healthcare. 
 Typically built upon deep learning algorithms, FMs help to reduce the burden of extensive data and compute resources required for deep learning by 
 
@@ -10,7 +11,7 @@ The authors demonstrated that the predictions favoured particular races and gend
 It is important for us to understand whether this problem persists in other datasets, as this would bring into question the reliability of the FM in the wild. 
 To this end, we study whether the findings in [1] translate into another open-source radiography dataset, namely the MIMIC-CXR database [2].
 
-# Methods
+# Bias analysis
 We follow the general framework described in [2] but using the MIMIC-CXR dataset instead of CheXpert. The workflow is as follows:
 - train a DenseNet as in conventional setup: this serves as our baseline by which to compare with the foundaton model.
 - extract embeddings from DenseNet: we will use these in our feature space analysis later to discover if the key principal directions in feature space correlate with our demographics, hinting at bias
