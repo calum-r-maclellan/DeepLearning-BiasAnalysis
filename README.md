@@ -8,7 +8,10 @@ We show that the studied foundation model from Google Health encodes no biases o
 the resulting evidence would support the safe implementation of this model into a clinical setting with similar patient populations. 
 On this basis, we hope to convince AI vendors of the expected utility of involving such evidence in the development (and deployment) phase of clinically targeted FMs for optimising their integration into practice.
 
-# 1. Introduction
+More details of the background and methodology are presented in the accompanying pdf file.
 
-**Background on foundation models.** 
-Deep learning (DL) has seen tremendous success in healthcare analytics, particularly for tasks in medical imaging such as diagnostics [1]. 
+# Results 
+We present the main results to the bias analysis in Figures 2 (PCA visualisations) and 3 (generalisation performance).
+For the PCA results, we are looking to demonstrate two key findings: (1) significant overlap- ping across our patient subgroups; and (2) significant differences across our disease labels. In the former, this demonstrates that the FM does not leverage sensitive attributes to dis- criminate between each pathology label; in the latter, non-overlapping support across the distributions suggests the model has learned to associate unique features to each pathology. For the performance analysis, our goal is to show no disparities across the patient subgroups, meaning we observe consistent performance no matter the demographic attributes of the patients.
+
+![Comparison](figs/densenet-pca/pca-1+2-densenet-age.png)
