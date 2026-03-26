@@ -2,7 +2,7 @@
 
 Deep learning has revolutionised the field of medical imaging analysis due to its ability to extract meaningful predictive patterns automatically from large clinical databases. In this setting, the goal is to learn a model for transforming a medical image (e.g., chest X-ray) into a diagnostic label indicating the presence or absence of pathology. Given the learned model, one can then infer labels on new patient data, creating opportunities for real-time diagnostic use in the clinical setting. 
 
-However, deep learning models (by design) tend to suffer from over-parameterisation, where the size of the model parameter space outmatches the size of the input feature space. As a result, they tend to leverage noise in the data in order to separate categories. 
+However, deep learning models (by design) tend to suffer from over-parameterisation, where the size of the model parameter space outmatches the size of the input feature space. As a result, they tend to leverage noise in the data in order to separate categories of interest, such as disease states (healthy or not). 
 This can often cause the model to learn patterns which (though statistically correct) have no relevance to the predictive task at hand. 
 To make this concept clearer, consider the diagram below. 
 This describes a deep learning model that has been trained to separate healthy patients from those with Cardiomegaly, based on their CXR data. Although it has achieved a certain degree of predictive accuracy at doing this, the model has also learned that the presence of Cardiomegaly is largely attributed to the patient's race, where more White patients have Cardiomegaly than Black patients. 
