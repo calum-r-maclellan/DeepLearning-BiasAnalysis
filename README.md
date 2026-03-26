@@ -28,7 +28,7 @@ For the PCA results, we are looking to demonstrate two key findings: (1) signifi
 # Conclusions
 The purpose of this project was to examine whether an open-source foundation model (FM) yielded preferential predictions towards certain demographics of patients in an out-of-distribution dataset. We follow-on from previous work [4], who revealed that the FM provided by Google Health [9] did indeed exhibit biased predictions on the so-called CheXpert dataset. Our  goal was to study the extent of such biases within a separate validation dataset called MIMIC-CXR [10].
 
-Through statistical signifance testing, we demonstrated that the evidence strongly suggested that the FM encoded no biases on this particular dataset, helping support potential decisions to implement this FM in settings with similar patient populations. 
+Through statistical signifance testing, we demonstrated that the evidence strongly suggested that this FM encoded no biases on this particular dataset (MIMIC-CXR), suggesting that it lies within the support of the model's training data. Caution should still be exercised in using such a model, and a thorough statistical analysis to compare the supports between development and deployment datasets before implementing this FM in settings with similar patient populations. 
 
 # References 
 [1] C ̧allı E, Sogancioglu E, van Ginneken B, van Leeuwen KG, and Murphy K. Deep learning for chest x-ray analysis: a survey. Med. Image Anal., 72(102125):259–265, 2021.
