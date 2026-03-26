@@ -1,19 +1,20 @@
 # Introduction
 
 Deep learning has revolutionised the field of medical imaging analysis due to its ability to extract meaningful predictive patterns automatically from large clinical databases. In this setting, the goal is to learn a model for transforming a medical image (e.g., chest X-ray) into a diagnostic label indicating the presence or absence of pathology. Given the learned model, one can then infer labels on new patient data, creating opportunities for real-time diagnostic use in the clinical setting. 
-
 However, deep learning models (by design) tend to suffer from over-parameterisation, where the size of the model parameter space outmatches the size of the input feature space. As a result, they tend to leverage noise in the data in order to separate categories of interest, such as disease states (healthy or not). 
 This can often cause the model to learn patterns which (though statistically correct) have no relevance to the predictive task at hand. 
+
 To make this concept clearer, consider the diagram below. 
 This describes a deep learning model that has been trained to separate healthy patients from those with Cardiomegaly, based on their CXR data. Although it has achieved a certain degree of predictive accuracy at doing this, the model has also learned that the presence of Cardiomegaly is largely attributed to the patient's race, where more White patients have Cardiomegaly than Black patients. 
 This is a spurious signal, and suggests that the training dataset is biased towards White patients: the model has picked this statistical signal up, and propagates it into all future predictions. 
 
+
+In fact, it was recently shown by a group of researchers from the UK [4] that a popular open-source foundation model developed by Google Health [9] has a propensity to make biased predictions on a dataset outside of its training set, called CheXpert. 
 A bias analysis helps identify such signals, and to inform data scientists/ML engineers about where they ought to better prepare the dataset for retraining.
 ![Disease-pca-model-comparison](figs/fig1.biasAnalysis.png)
 
-In fact, it was recently shown by a group of researchers from the UK [4] that a popular open-source foundation model developed by Google Health [9] has a propensity to make biased predictions on a dataset outside of its training set, called CheXpert. 
-
-In this project, we ask the question: is the model biased toward any dataset outside of its support? We follow the bias analysis technique in [4] using another dataset, called MIMIC-CXR. 
+In this project, we ask the question: 'is the model biased toward any dataset outside of its support?' 
+We follow the bias analysis technique in [4] using another dataset, called MIMIC-CXR, and study the foundation (pre-trained) model's corresponding predictions against a baseline model trained from scratch on MIMIC-CXR. 
 
 # Results 
 We present the main results to the bias analysis in Figures 2 (PCA visualisations) and 3 (generalisation performance).
