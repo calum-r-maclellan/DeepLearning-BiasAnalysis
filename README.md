@@ -11,6 +11,7 @@ This is a spurious signal, and suggests that the training dataset is biased towa
 
 In fact, it was recently shown by a group of researchers from the UK [4] that a popular open-source foundation model developed by Google Health [9] has a propensity to make biased predictions on a dataset outside of its training set, called CheXpert. 
 A bias analysis helps identify such signals, and to inform data scientists/ML engineers about where they ought to better prepare the dataset for retraining.
+
 ![Disease-pca-model-comparison](figs/fig1.biasAnalysis.png)
 
 In this project, we ask the question: 'is the model biased toward any dataset outside of its support?' 
