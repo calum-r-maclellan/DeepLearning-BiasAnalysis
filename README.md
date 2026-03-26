@@ -19,6 +19,9 @@ A bias analysis helps identify such signals, and to inform data scientists/ML en
 In this project, we ask the question: 'is the model biased toward any dataset outside of its support?' 
 We follow the bias analysis technique in [4] using another dataset, called MIMIC-CXR, and study the foundation (pre-trained) model's corresponding predictions against a baseline model trained from scratch on MIMIC-CXR. 
 
+**Note.**
+This method is not my own. Please refer to the original paper and accompanying Github repo of the researchers whose method we re-implemented: https://github.com/biomedia-mira/cxr-foundation-bias
+
 # Results 
 We present the main results to the bias analysis in Figures 2 (PCA visualisations) and 3 (generalisation performance).
 For the PCA results, we are looking to demonstrate two key findings: (1) significant overlap- ping across our patient subgroups; and (2) significant differences across our disease labels. In the former, this demonstrates that the FM does not leverage sensitive attributes to dis- criminate between each pathology label; in the latter, non-overlapping support across the distributions suggests the model has learned to associate unique features to each pathology. For the performance analysis, our goal is to show no disparities across the patient subgroups, meaning we observe consistent performance no matter the demographic attributes of the patients.
