@@ -3,6 +3,7 @@
 ![Disease-pca-model-comparison](figs/fig1.biasAnalysis.png)
 
 # Introduction
+(mention somewhere: purpose here is for examining proprietary models, where we dont have access to model codes or weights. Therefore, we assume that we are permitted access to the model **embeddings** provided by the company we are purchasing the model from)
 
 Deep learning has revolutionised the field of medical imaging analysis due to its ability to extract meaningful predictive patterns automatically from large clinical databases. In this setting, the goal is to learn a model for transforming a medical image (e.g., chest X-ray) into a diagnostic label indicating the presence or absence of pathology. Given the learned model, one can then infer labels on new patient data, creating opportunities for real-time diagnostic use in the clinical setting. 
 However, deep learning models (by design) tend to suffer from over-parameterisation, where the size of the model parameter space outmatches the size of the input feature space. As a result, they tend to leverage noise in the data in order to separate categories of interest, such as disease states (healthy or not). 
